@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HYDROLINK</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #0a0a0a, #1c1c1c);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .container {
+      width: 90%;
+      max-width: 400px;
+    }
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2em;
+      letter-spacing: 2px;
+      color: #00c6ff;
+    }
+    .box {
+      background: #111;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 15px 0;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+    }
+    .box button {
+      background: #00c6ff;
+      border: none;
+      color: black;
+      font-weight: bold;
+      padding: 12px 25px;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .box button:hover {
+      background: #00a1cc;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>HYDROLINK</h1>
+
+    <div id="step1" class="box">
+      <h3>Langkah 1: Gabung Grup WhatsApp</h3>
+      <button onclick="joinGroup()">Gabung Grup</button>
+    </div>
+
+    <div id="step2" class="box hidden">
+      <h3>Langkah 2: Gabung Saluran WhatsApp</h3>
+      <button onclick="joinChannel()">Gabung Saluran</button>
+    </div>
+
+    <div id="downloads" class="box hidden">
+      <h3>Download File</h3>
+      <button onclick="window.location.href='https://www.mediafire.com/file/dpod43top44pd51/ALL_BAHAN_UP_DABIS_FRESH_2025_HYDRO.7z/file'">
+        BAHAN UP DABIS
+      </button>
+      <br><br>
+      <button onclick="window.location.href='https://www.mediafire.com/file/8ts4ox8eq56gqdq/HYDRO_BANDING_VVIP.apk/file'">
+        APK BANDING HYDRO
+      </button>
+    </div>
+  </div>
+
+  <script>
+    let groupJoined = false;
+    let channelJoined = false;
+
+    function joinGroup() {
+      window.open('https://chat.whatsapp.com/GtmJq6ZMBHvDOmuJjRs6pe?mode=wwt', '_blank');
+      groupJoined = true;
+      document.getElementById('step1').classList.add('hidden');
+      document.getElementById('step2').classList.remove('hidden');
+    }
+
+    function joinChannel() {
+      window.open('https://whatsapp.com/channel/0029Vb5NpUy6GcG6grRK8K02', '_blank');
+      channelJoined = true;
+      document.getElementById('step2').classList.add('hidden');
+      document.getElementById('downloads').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
